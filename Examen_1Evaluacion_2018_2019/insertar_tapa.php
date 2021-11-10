@@ -66,6 +66,6 @@ print'
         </form>
         </div>';
 
-
+var_dump($_SESSION['tapas']);
 include 'pie.php';
 
