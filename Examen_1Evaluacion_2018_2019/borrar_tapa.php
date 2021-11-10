@@ -5,10 +5,11 @@ if(isset($_REQUEST['borrar'])) //si he pulsado Calcular
 {
   $codigo_tapa=$_REQUEST['codigo'];
   //numero elementos en el array antes de borrar
-  $contador_antes=count($_SESSION['tapas']);
+  $contador_antes=count($_SESSION['tapas']);//los contadores se ponen para luego cuando se borren las tapas o no existan que nos salga la alerta
   //borro en el array [$codigo_tapa es el indice que queremos borrar]
   unset($_SESSION['tapas'][$codigo_tapa]);
   //numero elementos en el array despues de borrar
+  //ponemso el contador de despues y hacemos la comparacion antes == despues
   $contador_despues=count($_SESSION['tapas']);
   if($contador_antes==$contador_despues)
   {
@@ -19,14 +20,14 @@ if(isset($_REQUEST['borrar'])) //si he pulsado Calcular
     echo '<script>alert("La tapa se ha borrado con exito");</script>';
   }
   //echo'<pre>';
-  //var_dump($_SESSION['votos']);
+  var_dump($_SESSION['tapas']);
   //echo'</pre>';
 }                                                  
  print' 
             <strong>INTRODUCE EL CODIGO DE LA TAPA A  PARA BORRAR <BR><BR></strong>
                                      
         <div   class="postcontent">
-         <form action="" method="post">
+         <form action="borrar_tapa.php" method="post">
             <table align="center" class="content-layout">
               
               
