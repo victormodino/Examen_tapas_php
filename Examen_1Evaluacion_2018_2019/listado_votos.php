@@ -6,8 +6,8 @@ include 'head.php';
 //echo'</pre>';
 echo '<table> 
 <thead>
-    <th>Codigo tapa</th>
-    <th>Nº votos</th>
+    <th>Codigo  tapa</th>
+    <th>Nº  votos</th>
 </thead>';//creamos un foreach  de sesion votos y  que nos muestre la clave y el valor para contar los votos en una tabla
 foreach($_SESSION['votos']as $clave=>$valor)
 {
