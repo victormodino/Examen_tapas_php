@@ -8,7 +8,7 @@ echo '<table>
 <tr>
     <th>Codigo de la tapa</th>
     <th>Nº de votos</th>
-</tr>';
+</tr>';//creamos un foreach  de sesion votos y  que nos muestre la clave y el valor para contar los votos en una tabla
 foreach($_SESSION['votos']as $clave=>$valor)
 {
     echo '<tr>';
