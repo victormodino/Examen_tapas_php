@@ -16,7 +16,7 @@ if(isset($_REQUEST['borrar'])) //si he pulsado Calcular
     echo '<script>alert("No tenemos esa tapa en la carta");</script>';
   }
   else{
-    unset($_SESSION['votos'][$codigo_tapa]);
+    unset($_SESSION['tapas'][$codigo_tapa]);//metiendo codigo_tapa nos elimina el registro de votos
     echo '<script>alert("Tapa borrada con exito");</script>';
   }
   //echo'<pre>';
