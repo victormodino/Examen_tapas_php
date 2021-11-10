@@ -9,15 +9,15 @@ if(isset($_REQUEST['borrar'])) //si he pulsado Calcular
   //borro en el array [$codigo_tapa es el indice que queremos borrar]
   unset($_SESSION['tapas'][$codigo_tapa]);
   //numero elementos en el array despues de borrar
-  //ponemso el contador de despues y hacemos la comparacion antes == despues
+  //ponemos el contador de despues y hacemos la comparacion antes == despues
   $contador_despues=count($_SESSION['tapas']);
   if($contador_antes==$contador_despues)
   {
-    echo '<script>alert("No se encuentra esa tapa");</script>';
+    echo '<script>alert("No tenemos esa tapa en la carta");</script>';
   }
   else{
     unset($_SESSION['votos'][$codigo_tapa]);
-    echo '<script>alert("La tapa se ha borrado con exito");</script>';
+    echo '<script>alert("Tapa borrada con exito");</script>';
   }
   //echo'<pre>';
   var_dump($_SESSION['tapas']);
