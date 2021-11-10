@@ -13,7 +13,8 @@ $_SESSION['tapas']= array (
   'TV-0005' =>array ('cutrillo',1,1),
   'PV-0001' =>array ('Txerri Beltz', 12,2),
   'PV-0002' =>array ('Esencia', 11,0),
-  'PV-0003' =>array ('Rebanada de Vida',10,2)
+  'PV-0003' =>array ('Rebanada de Vida',10,2),
+  'PV-0004' =>array ('Bocadillo Ribera',8,3)
   );
 
 
@@ -24,7 +25,8 @@ $_SESSION['votos']= array('TV-0001' => 0,
             'TV-0005' => 0,
             'PV-0001' =>0,
             'PV-0002' =>0,
-            'PV-0003' =>0);
+            'PV-0003' =>0,
+            'PV-0004' =>0);
 //var_dump ($tapas);
 
 include 'pie.php';

@@ -1,30 +1,31 @@
 <?php
 session_start();
+
 include 'head.php';
-if(isset($_REQUEST['calcular'])) //si he pulsado Calcular
+if(isset($_REQUEST['insertar'])) //si he pulsado insertar
 {
   $codigo_tapa=$_REQUEST['codigo'];
   $nombre_tapa=$_REQUEST['nombre'];
   $precio_tapa=$_REQUEST['precio'];
   $tipo_tapa=$_REQUEST['tipo_tapa'];
-  //inserto en el array
-  $_SESSION['tapas'][$codigo_tapa]=
-  array($nombre_tapa,$precio_tapa,$tipo_tapa);
-  echo'<pre>';
-  //var_dump($_SESSION['votos']);
-  echo'</pre>';
 
+  //inserto en el array
+  $_SESSION['tapas'][$codigo_tapa]=array($nombre_tapa,$precio_tapa,$tipo_tapa);
+  echo'<pre>';
+  //var_dump($_SESSION['tapas']);
+  echo'</pre>';
+ //required para que sea obligatorio meter un dato
 }
 print' 
         <h2 class="postheader">FORMULARIO PARA AÑADIR UNA TAPA</h2>
                                      
            <div   class="postcontent">
-                <form action="" method="post">
+                <form action="insertar_tapa.php" method="post">
                     <table align="center" class="content-layout">
                      <tr>
                       <td align="right"><strong>Codigo de la Tapa :</strong></td>
                       <td>
-                        <input type="text" name="codigo" size="10" />
+                        <input type="text" name="codigo" size="10"  required />
                       </td>
                      </tr>
                      <tr>
@@ -57,7 +58,7 @@ print'
                     <tr>
                         <td colspan="2">
                           <div align="center"><strong>
-                            <input name="calcular" type="submit" value="Insertar Tapa"/>
+                            <input name="insertar" type="submit" value="Insertar Tapa"/>
                             </strong>
                           </div>
                         </td>
@@ -66,6 +67,6 @@ print'
         </form>
         </div>';
 
-var_dump($_SESSION['tapas']);
+var_dump($_SESSION['tapas']);//para ver el array
 include 'pie.php';
 
